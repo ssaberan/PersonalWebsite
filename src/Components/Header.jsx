@@ -73,15 +73,13 @@ const StyledMenu = styled.div`
    text-align: center;
 
    @media screen and (max-width: 960px) {
-      display: flex;
+      display: ${({ openMobileMenu }) => (openMobileMenu ? "flex" : "none")};
       flex-direction: column;
       width: 100%;
       height: 90vh;
       position: absolute;
       top: 80px;
       left: ${({ openMobileMenu }) => (openMobileMenu ? 0 : "100%")};
-      opacity: 1;
-      transition: all 0.5s ease;
       background: #101522;
    }
 `;
