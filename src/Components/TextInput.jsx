@@ -24,7 +24,7 @@ const StyledError = styled.label`
    margin: auto;
    display: block;
    width: 100%;
-   color: #ff7f7f;
+   color: red;
    margin-top: 5px;
 `;
 
