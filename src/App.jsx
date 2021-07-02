@@ -19,7 +19,7 @@ function App() {
    return (
       <Router>
          <GlobalStyling />
-         <ScrollToTop /> {/* TODO: Make this work */}
+         <ScrollToTop />
          <Header />
          <Switch>
             <Redirect path="/" to="/home" exact component={Home} />
