@@ -6,6 +6,7 @@ import { Formik, Form } from "formik";
 import Button from "../../Components/Button";
 import TextInput from "../../Components/TextInput";
 import TextArea from "../../Components/TextArea";
+import { validate, isValid } from "./Validation";
 
 const StyledForm = styled(Form)`
    display: block;
@@ -59,20 +60,6 @@ const Contact = () => {
       console.log("******");
    };
 
-   const validate = (values) => {
-      const errors = {};
-      if (!values.name.trim()) {
-         errors.name = "A name is required to submit";
-      }
-      if (!values.subject.trim()) {
-         errors.subject = "A subject is required to submit";
-      }
-      if (!values.message.trim()) {
-         errors.message = "A message is required to submit";
-      }
-      return errors;
-   };
-
    return (
       <>
          <Formik
@@ -81,7 +68,7 @@ const Contact = () => {
          >
             {({ values }) => (
                <StyledFormWrapper>
-                  <StyledForm onSubmit={sendEmail}>
+                  <StyledForm onSubmit={sendEmail} autoComplete="off">
                      <h1>Contact Form</h1>
                      <h3>Send an email to Soroush</h3>
                      <StyledInputWrapper>
@@ -96,13 +83,7 @@ const Contact = () => {
                      <Button
                         type="submit"
                         text="Send"
-                        disabled={
-                           !(
-                              values.name.trim() &&
-                              values.subject.trim() &&
-                              values.message.trim()
-                           )
-                        }
+                        disabled={!isValid(values)}
                      />
                   </StyledForm>
                </StyledFormWrapper>
