@@ -61,13 +61,13 @@ const Contact = () => {
 
    const validate = (values) => {
       const errors = {};
-      if (!values.name) {
+      if (!values.name.trim()) {
          errors.name = "A name is required to submit";
       }
-      if (!values.subject) {
+      if (!values.subject.trim()) {
          errors.subject = "A subject is required to submit";
       }
-      if (!values.message) {
+      if (!values.message.trim()) {
          errors.message = "A message is required to submit";
       }
       return errors;
@@ -97,7 +97,11 @@ const Contact = () => {
                         type="submit"
                         text="Send"
                         disabled={
-                           !(values.name && values.subject && values.message)
+                           !(
+                              values.name.trim() &&
+                              values.subject.trim() &&
+                              values.message.trim()
+                           )
                         }
                      />
                   </StyledForm>
