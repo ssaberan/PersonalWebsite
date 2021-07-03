@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import emailjs from "emailjs-com";
 import { Formik, Form } from "formik";
@@ -32,6 +32,8 @@ const StyledFormWrapper = styled.div`
    margin: auto;
    display: block;
    background-image: linear-gradient(#164d69, #101522);
+   top: 0;
+   bottom: 0;
 `;
 
 const StyledInputWrapper = styled.div`
@@ -39,28 +41,31 @@ const StyledInputWrapper = styled.div`
 `;
 
 const Contact = () => {
+   const [show, setShow] = useState("form");
+
    const sendEmail = (e) => {
       e.preventDefault();
 
-      // emailjs
-      //    .sendForm(
-      //       "service_wuk7fha",
-      //       "template_iwcxr0f",
-      //       e.target,
-      //       "user_L5iDeh6WPPpM7T9mHslFG" // ok to expose. can only be used to send emails to me
-      //    )
-      //    .then(
-      //       (result) => {
-      //          console.log(result.text);
-      //       },
-      //       (error) => {
-      //          console.log(error.text);
-      //       }
-      //    );
-      console.log("******");
+      emailjs
+         .sendForm(
+            "service_wuk7fha",
+            "template_iwcxr0f",
+            e.target,
+            "user_L5iDeh6WPPpM7T9mHslFG" // ok to expose. can only be used to send emails to me
+         )
+         .then(
+            (result) => {
+               console.log(result.text);
+               setShow("sent");
+            },
+            (error) => {
+               console.log(error.text);
+               setShow("error");
+            }
+         );
    };
 
-   return (
+   const form = (
       <>
          <Formik
             initialValues={{ name: "", subject: "", message: "" }}
@@ -91,6 +96,28 @@ const Contact = () => {
          </Formik>
       </>
    );
+
+   const sent = (
+      <>
+         <h1>Sent!</h1>
+      </>
+   );
+
+   const error = (
+      <>
+         <h1>Error!</h1>
+      </>
+   );
+
+   if (show === "sent") {
+      return sent;
+   }
+
+   if (show === "error") {
+      return error;
+   }
+
+   return form;
 };
 
 export default Contact;
