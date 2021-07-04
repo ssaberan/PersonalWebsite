@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
+import gfm from "remark-gfm";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
+import "katex/dist/katex.min.css";
 
 const Post1 = () => {
    const [state, setState] = useState({ terms: null });
@@ -14,7 +18,12 @@ const Post1 = () => {
 
    return (
       <>
-         <ReactMarkdown>{state.terms}</ReactMarkdown>
+         <ReactMarkdown
+            remarkPlugins={[gfm, remarkMath]}
+            rehypePlugins={[rehypeKatex]}
+         >
+            {state.terms}
+         </ReactMarkdown>
       </>
    );
 };
