@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import emailjs from "emailjs-com";
 import { Formik, Form } from "formik";
+import { Helmet } from "react-helmet";
 
 import Button from "../../Components/Button";
 import TextInput from "../../Components/TextInput";
@@ -67,6 +68,9 @@ const Contact = () => {
 
    const form = (
       <>
+         <Helmet>
+            <title>Contact Form</title>
+         </Helmet>
          <Formik
             initialValues={{ name: "", subject: "", message: "" }}
             validate={validate}
@@ -99,12 +103,18 @@ const Contact = () => {
 
    const sent = (
       <>
+         <Helmet>
+            <title>Email Sent</title>
+         </Helmet>
          <h1>Sent!</h1>
       </>
    );
 
    const error = (
       <>
+         <Helmet>
+            <title>Error</title>
+         </Helmet>
          <h1>Error!</h1>
       </>
    );

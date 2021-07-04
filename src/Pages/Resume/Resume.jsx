@@ -1,7 +1,14 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 const Resume = () => {
-   return <div></div>;
+   return (
+      <>
+         <Helmet>
+            <title>Resume</title>
+         </Helmet>
+      </>
+   );
 };
 
 export default Resume;

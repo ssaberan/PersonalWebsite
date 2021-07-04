@@ -15,6 +15,9 @@ import Projects from "./Pages/Projects/Projects";
 import Resume from "./Pages/Resume/Resume";
 import Contact from "./Pages/Contact/Contact";
 
+// blog posts
+import Post1 from "./Pages/Blog/BlogPosts/Post1";
+
 function App() {
    return (
       <Router>
@@ -22,12 +25,18 @@ function App() {
          <ScrollToTop />
          <Header />
          <Switch>
+            {/* home page */}
             <Redirect path="/" to="/home" exact component={Home} />
+
+            {/* menu pages */}
             <Route path="/home" exact component={Home} />
             <Route path="/blog" exact component={Blog} />
             <Route path="/projects" exact component={Projects} />
             <Route path="/resume" exact component={Resume} />
             <Route path="/contact" exact component={Contact} />
+
+            {/* blog posts */}
+            <Route path="/blog/1" exact component={Post1} />
          </Switch>
       </Router>
    );

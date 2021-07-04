@@ -100,6 +100,7 @@ const Section = ({
    alt,
    url,
    buttonText,
+   sameTab,
    verticalPadding,
 }) => {
    return (
@@ -131,7 +132,12 @@ const Section = ({
                            {description}
                         </StyledDescription>
                         {url && (
-                           <Button url={url} text={buttonText} tabIndex={0} />
+                           <Button
+                              url={url}
+                              text={buttonText}
+                              sameTab={sameTab}
+                              tabIndex={0}
+                           />
                         )}
                      </StyledText>
                   </StyledColumn>
@@ -157,11 +163,13 @@ Section.propTypes = {
    alt: PropTypes.string,
    url: PropTypes.string,
    buttonText: PropTypes.string,
+   sameTab: PropTypes.bool,
    verticalPadding: PropTypes.number,
 };
 
 Section.defaultProps = {
    verticalPadding: 120,
+   sameTab: false,
 };
 
 export default Section;

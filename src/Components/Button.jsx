@@ -28,9 +28,13 @@ const StyledButton = styled.button`
    }
 `;
 
-const Button = ({ url, text, type, disabled }) => {
+const Button = ({ url, text, type, disabled, sameTab }) => {
    const onClick = () => {
-      window.open(url).focus();
+      if (sameTab) {
+         window.open(url, "_self");
+      } else {
+         window.open(url);
+      }
    };
 
    return (
@@ -49,10 +53,12 @@ Button.propTypes = {
    type: PropTypes.string,
    url: PropTypes.string,
    disabled: PropTypes.bool,
+   sameTab: PropTypes.bool,
 };
 
 Button.defaultProps = {
    type: "button",
+   sameTab: false,
 };
 
 export default Button;

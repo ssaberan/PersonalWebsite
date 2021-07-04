@@ -9,6 +9,7 @@ export const sectionData = {
    alt: "description of the image",
    url: "absolute or relative url to page you want button to open on click",
    buttonText: "text to go in the button",
+   sameTab: boolean for button link to open in same tab or not,
    verticalPadding: number for top and bottom padding of section
 };
 */
