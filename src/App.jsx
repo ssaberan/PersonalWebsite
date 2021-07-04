@@ -16,7 +16,7 @@ import Resume from "./Pages/Resume/Resume";
 import Contact from "./Pages/Contact/Contact";
 
 // blog posts
-import Post1 from "./Pages/Blog/BlogPosts/Post1";
+import Post1 from "./Pages/Blog/BlogPosts/Post1/fullPost";
 
 function App() {
    return (
