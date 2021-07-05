@@ -287,7 +287,7 @@ const rawPost = () => {
             {solvedFunctionInline}, we should expect to get the answer to the
             Basel problem, which was confirmed to be {baselSolution} by Leonhard
             Eulor in 1734{source}. However, doing so yields {mySolution} for
-            whatever reason, meaning i made a mistake in my math somewhere (or
+            whatever reason, meaning I made a mistake in my math somewhere (or
             that {joke} haha). Maybe someday I will revisit this and find where
             I went wrong.
          </p>
