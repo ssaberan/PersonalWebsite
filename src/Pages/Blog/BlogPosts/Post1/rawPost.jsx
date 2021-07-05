@@ -51,7 +51,10 @@ const baselTaylorSub = (
 );
 
 const fPrime = (
-   <img src="https://latex.codecogs.com/gif.latex?f^{n}(1)" title="f^{n}(1)" />
+   <img
+      src="https://latex.codecogs.com/gif.latex?\inline&space;f^{(n)}(1)"
+      title="f^{(n)}(1)"
+   />
 );
 
 const fPrimeEquals = (
@@ -65,15 +68,15 @@ const x1 = <img src="https://latex.codecogs.com/gif.latex?x=1" title="x=1" />;
 
 const taylorOfF = (
    <img
-      src="https://latex.codecogs.com/gif.latex?f(x)=\sum_{n=0}^{\infty}\frac{f^{n}(1)}{n!}(x-1)^{n}"
-      title="f(x)=\sum_{n=0}^{\infty}\frac{f^{n}(1)}{n!}(x-1)^{n}"
+      src="https://latex.codecogs.com/gif.latex?f(x)=\sum_{n=0}^{\infty}\frac{f^{(n)}(1)}{n!}(x-1)^{n}"
+      title="f(x)=\sum_{n=0}^{\infty}\frac{f^{(n)}(1)}{n!}(x-1)^{n}"
    />
 );
 
 const fPrimeEqualsInline = (
    <img
-      src="https://latex.codecogs.com/gif.latex?\inline&space;f^{n}(1)=\frac{n!}{(n&plus;1)^{2}}"
-      title="f^{n}(1)=\frac{n!}{(n+1)^{2}}"
+      src="https://latex.codecogs.com/gif.latex?\inline&space;f^{(n)}(1)=\frac{n!}{(n&plus;1)^{2}}"
+      title="f^{(n)}(1)=\frac{n!}{(n+1)^{2}}"
    />
 );
 
