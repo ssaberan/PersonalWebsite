@@ -20,7 +20,7 @@ export const blogPostData1 = {
    header: "Math",
    subheader: "A bizarre way of evaluating infinite series'",
    description:
-      "By equating any arbitrary infinite series to a Taylor expansion of some unknown function, we can evaluate the infinite series by finding this unknown function. This is an idea I came up with when studying how Talor expansions work, and this blog post goes into the details of what I uncovered.",
+      "By equating an arbitrary infinite series to a Taylor expansion of some unknown function, we can evaluate the infinite series by finding this unknown function. This is an idea I came up with when studying how Talor expansions work, and this blog post goes into the details of what I uncovered.",
    image: "../../../images/studying_pi.svg",
    alt: "A person studying math",
    url: "blog/1",
