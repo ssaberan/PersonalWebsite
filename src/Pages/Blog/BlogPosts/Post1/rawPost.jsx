@@ -86,8 +86,8 @@ const substitution = (
 
 const formula = (
    <img
-      src="https://latex.codecogs.com/gif.latex?\inline&space;\sum_{n=0}^{\infty}=\frac{1}{1-t}"
-      title="\sum_{n=0}^{\infty}=\frac{1}{1-t}"
+      src="https://latex.codecogs.com/gif.latex?\inline&space;\sum_{n=0}^{\infty}t^{n}=\frac{1}{1-t}"
+      title="\sum_{n=0}^{\infty}t^{n}=\frac{1}{1-t}"
    />
 );
 
