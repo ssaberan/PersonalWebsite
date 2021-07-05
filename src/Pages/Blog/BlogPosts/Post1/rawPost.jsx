@@ -56,8 +56,8 @@ const fPrime = (
 
 const fPrimeEquals = (
    <img
-      src="https://latex.codecogs.com/gif.latex?f^{n}(1)=\frac{n!}{(n&plus;1)^{2}}\;&space;for\;&space;n\in&space;\mathbb{N}\cup\{0\}"
-      title="f^{n}(1)=\frac{n!}{(n+1)^{2}}\; for\; n\in \mathbb{N}\cup\{0\}"
+      src="https://latex.codecogs.com/gif.latex?f^{(n)}(1)=\frac{n!}{(n&plus;1)^{2}}\;&space;for\;&space;n\in&space;\mathbb{N}\cup\{0\}"
+      title="f^{(n)}(1)=\frac{n!}{(n+1)^{2}}\; for\; n\in \mathbb{N}\cup\{0\}"
    />
 );
 
