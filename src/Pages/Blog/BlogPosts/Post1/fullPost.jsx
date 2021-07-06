@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Helmet } from "react-helmet";
 
 import rawPost from "./rawPost";
 
@@ -20,7 +21,14 @@ const StyledPage = styled.div`
 `;
 
 const Post1 = () => {
-   return <StyledPage>{rawPost()}</StyledPage>;
+   return (
+      <>
+         <Helmet>
+            <title>Blog Post 1</title>
+         </Helmet>
+         <StyledPage>{rawPost()}</StyledPage>
+      </>
+   );
 };
 
 export default Post1;
