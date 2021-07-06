@@ -283,7 +283,7 @@ const rawPost = () => {
             <i>some</i> series {S}.
          </p>
          <br />
-         <p>Except for one minor detail...</p>
+         <p>Except for one not-so-minor detail...</p>
          <br />
          <p>
             Assuming I did everything right, if we plug {x2} into{" "}
