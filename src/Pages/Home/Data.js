@@ -26,7 +26,7 @@ export const whoAmIData = {
    alignment: "left",
    header: "Who Am I?",
    description:
-      "Hi! My name is Soroush and I am a fullstack web developer! I graduated in 2019 from UC San Diego with a bachelors in math, after which I moved to New York City to begin my first job as a software developer for American Express. In addition to the web development I do in a professional setting, I enjoy doing game development and machine learning in my free time.",
+      "Hi! My name is Soroush and I am a fullstack web developer at American Express! I graduated in 2019 from UC San Diego with a bachelors in math, after which I moved to New York City to begin my first job as a software developer at Amex. In addition to the web development I do in a professional setting, I enjoy doing game development and machine learning in my free time.",
    image: "../../../images/coding.svg",
    alt: "Me at my desk writing some code.",
 };
@@ -36,7 +36,7 @@ export const hobbiesData = {
    alignment: "right",
    header: "What else do I do?",
    description:
-      'My favorite hobby is probably sleeping in, but outside of that I enjoy playing piano, chess, video games, exercising, and watching random YouTube videos like "why isn\'t everything blue" or "how to convert numbers to base pi". I also used to enjoy hiking and longboarding, until I moved to New York City where those hobbies were replaced with exploring the city and going to restaurants.',
+      "My favorite hobby is probably sleeping in, but outside of that I enjoy playing piano, chess, video games, exercising, studying, and watching YouTube videos. I also used to enjoy hiking and longboarding, until I moved to New York City where those hobbies were replaced with exploring the city and going to restaurants.",
    image: "../../../images/walk.svg",
    alt: "Me taking a walk outside.",
 };
