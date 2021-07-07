@@ -278,9 +278,10 @@ const rawPost = () => {
          <p>{solvedFunction}</p>
          <br />
          <p>
-            is the value for {f} we were looking for, thus showing that it is
-            possible to derive a function from its Taylor expansion for{" "}
-            <i>some</i> series {S}.
+            is the value for {f} when {x2} we were looking for, thus showing
+            that it is possible to derive a function from its Taylor expansion
+            for <i>some</i> series {S} around some infinitely differentiable
+            point (in this case {a1}).
          </p>
          <br />
          <p>Except for one not-so-minor detail...</p>
