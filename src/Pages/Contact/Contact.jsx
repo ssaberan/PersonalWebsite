@@ -8,6 +8,8 @@ import Button from "../../Components/Button";
 import TextInput from "../../Components/TextInput";
 import TextArea from "../../Components/TextArea";
 import { validate, isValid } from "./Validation";
+import Sent from "./Sent";
+import Error from "./Error";
 
 const StyledForm = styled(Form)`
    display: block;
@@ -66,7 +68,15 @@ const Contact = () => {
          );
    };
 
-   const form = (
+   if (show === "sent") {
+      return Sent();
+   }
+
+   if (show === "error") {
+      return Error();
+   }
+
+   return (
       <>
          <Helmet>
             <title>Contact Form</title>
@@ -100,34 +110,6 @@ const Contact = () => {
          </Formik>
       </>
    );
-
-   const sent = (
-      <>
-         <Helmet>
-            <title>Email Sent</title>
-         </Helmet>
-         <h1>Sent!</h1>
-      </>
-   );
-
-   const error = (
-      <>
-         <Helmet>
-            <title>Error</title>
-         </Helmet>
-         <h1>Error!</h1>
-      </>
-   );
-
-   if (show === "sent") {
-      return sent;
-   }
-
-   if (show === "error") {
-      return error;
-   }
-
-   return form;
 };
 
 export default Contact;
