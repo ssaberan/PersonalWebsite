@@ -1,9 +1,9 @@
 {
    "version": "0.0.0",
    "scripts": {
-      "start": "vite",
+      "start:dev": "vite",
+      "start:prod": "vite preview",
       "build": "vite build",
-      "serve": "vite preview",
       "prettier:check": "npx prettier --check .",
       "prettier:write": "npx prettier --write .",
       "eslint": "./node_modules/.bin/eslint .",

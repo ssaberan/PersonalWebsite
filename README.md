@@ -19,10 +19,20 @@ npm run build
 Start the dev server
 
 ```bash
-npm run start
+npm run start:dev
 ```
 
 Then navigate to `http://localhost:3000/` to see the website
+
+or start the production server
+
+```bash
+npm run start:prod
+```
+
+Then navigate to `http://localhost:5000/` to see the website
+
+Note: If you want to run the website on an external device on the same network, add `-- --host` to either of the start scripts and then hit the url given to you once the script runs.
 
 ## Favicon Meaning
 

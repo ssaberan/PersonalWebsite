@@ -5,7 +5,7 @@ export const sectionData = {
    header: "header",
    subheader: "subheader",
    description: "description",
-   image: "path/to/image/from/here",
+   image: image which must be imported to work in production,
    alt: "description of the image",
    url: "absolute or relative url to page you want button to open on click",
    buttonText: "text to go in the button",
@@ -21,23 +21,25 @@ export const welcomeData = {
    subheader: "Welcome to my website",
 };
 
+import codingImage from "../../../images/coding.svg";
 export const whoAmIData = {
    darkTheme: false,
    alignment: "left",
    header: "Who Am I?",
    description:
       "Hi! My name is Soroush and I am a fullstack web developer at American Express! I graduated in 2019 from UC San Diego with a bachelors in math, after which I moved to New York City to begin my first job as a software developer at Amex. In addition to the web development I do in a professional setting, I enjoy doing game development and machine learning in my free time.",
-   image: "../../../images/coding.svg",
+   image: codingImage,
    alt: "Me at my desk writing some code.",
 };
 
+import walkImage from "../../../images/walk.svg";
 export const hobbiesData = {
    darkTheme: true,
    alignment: "right",
    header: "What else do I do?",
    description:
       "My favorite hobby is probably sleeping in, but outside of that I enjoy playing piano, chess, video games, exercising, studying, and watching YouTube videos. I also used to enjoy hiking and longboarding, until I moved to New York City where those hobbies were replaced with exploring the city and going to restaurants.",
-   image: "../../../images/walk.svg",
+   image: walkImage,
    alt: "Me taking a walk outside.",
 };
 

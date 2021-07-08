@@ -6,7 +6,7 @@ export const sectionData = {
    subheader: "subheader",
    description: "description",
    image: "path/to/image/from/here",
-   alt: "description of the image",
+   image: image which must be imported to work in production,
    url: "absolute or relative url to page you want button to open on click",
    buttonText: "text to go in the button",
    sameTab: boolean for button link to open in same tab or not
@@ -14,6 +14,7 @@ export const sectionData = {
 };
 */
 
+import blog1Image from "../../../images/studying_pi.svg";
 export const blogPostData1 = {
    darkTheme: true,
    alignment: "left",
@@ -21,7 +22,7 @@ export const blogPostData1 = {
    subheader: "A bizarre way of evaluating infinite series'",
    description:
       "By equating an arbitrary infinite series to a Taylor expansion of some unknown function, can we evaluate the infinite series by finding this unknown function? This is an idea I came up with when studying how Talor expansions work, and this blog post goes into the details of what I uncovered.",
-   image: "../../../images/studying_pi.svg",
+   image: blog1Image,
    alt: "A person studying math",
    url: "blog/1",
    buttonText: "Read the blog post",
