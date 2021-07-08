@@ -10,7 +10,7 @@ Install any necessary dependecnies (only needs to be done if node_modules are no
 npm i
 ```
 
-Build the files for production (not required for running locally)
+Build the files for production (not required for running the dev server)
 
 ```bash
 npm run build
