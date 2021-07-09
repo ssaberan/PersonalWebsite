@@ -51,7 +51,7 @@ const Button = ({ url, text, type, disabled, sameTab }) => {
    }
 
    return (
-      <Link to={url}>
+      <Link to={url} style={{ textDecoration: "none" }}>
          <StyledButton type="button">{text}</StyledButton>
       </Link>
    );
