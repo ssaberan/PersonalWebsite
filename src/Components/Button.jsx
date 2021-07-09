@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const StyledButton = styled.button`
    display: flex;
@@ -37,14 +38,22 @@ const Button = ({ url, text, type, disabled, sameTab }) => {
       }
    };
 
+   if (!sameTab || type === "submit") {
+      return (
+         <StyledButton
+            type={type}
+            onClick={url ? onClick : undefined}
+            disabled={disabled}
+         >
+            {text}
+         </StyledButton>
+      );
+   }
+
    return (
-      <StyledButton
-         type={type}
-         onClick={url ? onClick : undefined}
-         disabled={disabled}
-      >
-         {text}
-      </StyledButton>
+      <Link to={url}>
+         <StyledButton type="button">{text}</StyledButton>
+      </Link>
    );
 };
 
