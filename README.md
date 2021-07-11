@@ -1,6 +1,6 @@
 # Soroush's Personal Website
 
-Portfolio of Soroush's blog posts, projects, and resume, as well as a contact form for getting in touch with him.
+Portfolio of Soroush's blog posts, projects, and resume, as well as a contact form for getting in touch with him. Currently live at https://ssaberan.github.io/
 
 ## Usage
 
@@ -16,7 +16,7 @@ Build the files for production (not required for running the dev server)
 npm run build
 ```
 
-Start the dev server
+Start the dev server (supports hot reloading, but is not completely accurate to how it will behave in production)
 
 ```bash
 npm run start:dev
@@ -24,7 +24,7 @@ npm run start:dev
 
 Then navigate to `http://localhost:3000/` to see the website
 
-or start the production server
+or start the production server (does not support hot reloading, but behaves much closer to the real thing)
 
 ```bash
 npm run start:prod
