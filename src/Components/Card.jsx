@@ -4,31 +4,32 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const StyledCard = styled.div`
-   border: 5px solid #101522;
-   margin: 50px;
+   border: 10px solid #101522;
+   margin: 40px;
    text-align: center;
    width: 300px;
    overflow: hidden;
    background: #101522;
+   border-radius: 15px;
 
    &:hover {
       box-shadow: 10px 10px 10px 10px gray;
-      margin-top: 45px;
-      margin-left: 45px;
+      margin-top: 35px;
+      margin-left: 35px;
       transition: all 0.3s ease;
    }
 
-   @media screen and (max-width: 768px) {
+   @media screen and (max-width: 480px) {
       margin: auto;
-      margin: 0px;
-      width: 100%;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      border-bottom: 10px groove gray;
+      width: 80%;
+      margin-top: 35px;
+      padding: 10px;
+      border: 5px solid #101522;
 
       &:hover {
          box-shadow: none;
-         margin: 0px;
+         margin: auto;
+         margin-top: 35px;
       }
    }
 `;
@@ -39,7 +40,8 @@ const StyledImage = styled.img`
 
 const StyledTitle = styled.div`
    margin: auto;
-   padding: 5px;
+   padding-top: 5px;
+   padding-bottom: 5px;
    font-size: 20px;
    width: 100%;
    height: 100%;
@@ -48,7 +50,8 @@ const StyledTitle = styled.div`
 
 const StyledDescription = styled.div`
    margin: auto;
-   padding: 5px;
+   padding-top: 5px;
+   padding-bottom: 5px;
    font-size: 14px;
    width: 100%;
    height: 100%;
