@@ -11,7 +11,7 @@ const StyledPage = styled.div`
    padding-bottom: 50px;
    background: white;
 
-   @media screen and (max-width: 768px) {
+   @media screen and (max-width: 960px) {
       width: 75%;
    }
 
