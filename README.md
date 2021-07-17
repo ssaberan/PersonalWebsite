@@ -43,3 +43,7 @@ My initials are S.S. and my birthday is 8/8, so my favicon is meant to look like
 ## Mathematical Notation
 
 All mathematical notation used in blog posts come from here: https://www.codecogs.com/latex/eqneditor.php
+
+## Images
+
+All images except for the favicon are taken from `https://pixabay.com/` and `https://undraw.co/`

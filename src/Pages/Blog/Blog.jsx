@@ -1,8 +1,13 @@
 import React from "react";
+import styled from "styled-components";
 import { Helmet } from "react-helmet";
 
-import Section from "../../Components/Section";
+import Card from "../../Components/Card";
 import { blogPostData1 } from "./Data";
+
+const StyledDisplay = styled.div`
+   display: inline;
+`;
 
 const Blog = () => {
    return (
@@ -10,7 +15,9 @@ const Blog = () => {
          <Helmet>
             <title>Blog</title>
          </Helmet>
-         <Section {...blogPostData1} />
+         <StyledDisplay>
+            <Card {...blogPostData1} />
+         </StyledDisplay>
       </>
    );
 };
