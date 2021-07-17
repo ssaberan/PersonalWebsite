@@ -28,6 +28,7 @@ const StyledCard = styled.div`
 
       &:hover {
          box-shadow: none;
+         margin: 0px;
       }
    }
 `;
