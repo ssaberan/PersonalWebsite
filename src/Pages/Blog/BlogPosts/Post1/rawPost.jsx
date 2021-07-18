@@ -10,9 +10,13 @@ const source = (
    </a>
 );
 
-const f = <img src="https://latex.codecogs.com/gif.latex?f" title="f" />;
+const f = (
+   <img src="https://latex.codecogs.com/gif.latex?\inline&space;f" title="f" />
+);
 
-const a = <img src="https://latex.codecogs.com/gif.latex?a" title="a" />;
+const a = (
+   <img src="https://latex.codecogs.com/gif.latex?\inline&space;a" title="a" />
+);
 
 const taylorFormula = (
    <img
@@ -21,7 +25,9 @@ const taylorFormula = (
    />
 );
 
-const S = <img src="https://latex.codecogs.com/gif.latex?S" title="S" />;
+const S = (
+   <img src="https://latex.codecogs.com/gif.latex?\inline&space;S" title="S" />
+);
 
 const baselProblem = (
    <img
@@ -37,11 +43,23 @@ const baselTalor = (
    />
 );
 
-const x = <img src="https://latex.codecogs.com/gif.latex?x" title="x" />;
+const x = (
+   <img src="https://latex.codecogs.com/gif.latex?\inline&space;x" title="x" />
+);
 
-const x2 = <img src="https://latex.codecogs.com/gif.latex?x=2" title="x=2" />;
+const x2 = (
+   <img
+      src="https://latex.codecogs.com/gif.latex?\inline&space;x=2"
+      title="x=2"
+   />
+);
 
-const a1 = <img src="https://latex.codecogs.com/gif.latex?a=1" title="a=1" />;
+const a1 = (
+   <img
+      src="https://latex.codecogs.com/gif.latex?\inline&space;a=1"
+      title="a=1"
+   />
+);
 
 const baselTaylorSub = (
    <img
@@ -64,7 +82,12 @@ const fPrimeEquals = (
    />
 );
 
-const x1 = <img src="https://latex.codecogs.com/gif.latex?x=1" title="x=1" />;
+const x1 = (
+   <img
+      src="https://latex.codecogs.com/gif.latex?\inline&space;x=1"
+      title="x=1"
+   />
+);
 
 const taylorOfF = (
    <img
@@ -173,26 +196,69 @@ const solvedFunctionInline = (
 
 const baselSolution = (
    <img
-      src="https://latex.codecogs.com/gif.latex?\frac{\pi^{2}}{6}"
+      src="https://latex.codecogs.com/gif.latex?\inline&space;\frac{\pi^{2}}{6}"
       title="\frac{\pi^{2}}{6}"
    />
 );
 
 const mySolution = (
    <img
-      src="https://latex.codecogs.com/gif.latex?-\frac{\pi^{2}}{6}"
+      src="https://latex.codecogs.com/gif.latex?\inline&space;-\frac{\pi^{2}}{6}"
       title="-\frac{\pi^{2}}{6}"
    />
 );
 
 const joke = (
-   <img src="https://latex.codecogs.com/gif.latex?1=-1" title="1=-1" />
+   <img
+      src="https://latex.codecogs.com/gif.latex?\inline&space;1=-1"
+      title="1=-1"
+   />
+);
+
+const mistake = (
+   <img
+      src="https://latex.codecogs.com/gif.latex?\inline&space;\int_{0}^{x}\sum_{n=0}^{\infty}t^{n}dt=\int_{0}^{x}\frac{1}{1-t}dt\Rightarrow\sum_{n=0}^{\infty}\frac{x^{n&plus;1}}{n&plus;1}=ln(1-x)"
+      title="\int_{0}^{x}\sum_{n=0}^{\infty}t^{n}dt=\int_{0}^{x}\frac{1}{1-t}dt\Rightarrow\sum_{n=0}^{\infty}\frac{x^{n+1}}{n+1}=ln(1-x)"
+   />
+);
+
+const oneOver = (
+   <img
+      src="https://latex.codecogs.com/gif.latex?\inline&space;\frac{1}{1-t}"
+      title="\frac{1}{1-t}"
+   />
+);
+
+const zero = (
+   <img src="https://latex.codecogs.com/gif.latex?\inline&space;0" title="0" />
+);
+
+const t = (
+   <img src="https://latex.codecogs.com/gif.latex?\inline&space;t" title="t" />
+);
+
+const negNatLog = (
+   <img
+      src="https://latex.codecogs.com/gif.latex?\inline&space;-ln(1-t)"
+      title="-ln(1-t)"
+   />
+);
+
+const natLog = (
+   <img
+      src="https://latex.codecogs.com/gif.latex?\inline&space;ln(1-t)"
+      title="ln(1-t)"
+   />
 );
 
 const rawPost = () => {
    return (
       <>
-         <h1>A bizarre way of evaluating infinite series&apos;</h1>
+         <h1>A bizarre way of evaluating infinite series</h1>
+         <br />
+         <h4>Posted on July 4th, 2021 by Soroush Saberan</h4>
+         <br />
+         <hr />
          <br />
          <p>
             Given a function {f} that is infinitely differentiable around a
@@ -280,8 +346,8 @@ const rawPost = () => {
          <p>
             is the value for {f} when {x2} we were looking for, thus showing
             that it is possible to derive a function from its Taylor expansion
-            for <i>some</i> series {S} around some infinitely differentiable
-            point (in this case {a1}).
+            for <i>some</i> series {S} around <i>some</i> infinitely
+            differentiable point (in this case {a1}).
          </p>
          <br />
          <p>Except for one not-so-minor detail...</p>
@@ -294,6 +360,17 @@ const rawPost = () => {
             whatever reason, meaning I made a mistake in my math somewhere (or
             that {joke} haha). Maybe someday I will revisit this and find where
             I went wrong.
+         </p>
+         <br />
+         <hr />
+         <br />
+         <p>
+            <strong>Update on July 18th, 2021:</strong> After reading this blog
+            post, Khristrian Decastro has pointed out that my mistake was in the
+            step where I say {mistake}. The integral of {oneOver} from {zero} to{" "}
+            {x} with respect to {t} is actually equal to {negNatLog}, <i>not</i>{" "}
+            {natLog}. This is where the erronious negative sign came from in my
+            solution to the Basel problem.
          </p>
       </>
    );
