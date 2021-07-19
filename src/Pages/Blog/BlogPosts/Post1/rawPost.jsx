@@ -215,10 +215,10 @@ const joke = (
    />
 );
 
-const mistake = (
+const step3NoArrow = (
    <img
-      src="https://latex.codecogs.com/gif.latex?\inline&space;\int_{0}^{x}\sum_{n=0}^{\infty}t^{n}dt=\int_{0}^{x}\frac{1}{1-t}dt\Rightarrow\sum_{n=0}^{\infty}\frac{x^{n&plus;1}}{n&plus;1}=ln(1-x)"
-      title="\int_{0}^{x}\sum_{n=0}^{\infty}t^{n}dt=\int_{0}^{x}\frac{1}{1-t}dt\Rightarrow\sum_{n=0}^{\infty}\frac{x^{n+1}}{n+1}=ln(1-x)"
+      src="https://latex.codecogs.com/gif.latex?\sum_{n=0}^{\infty}\frac{x^{n&plus;1}}{n&plus;1}=ln(1-x)"
+      title="\sum_{n=0}^{\infty}\frac{x^{n+1}}{n+1}=ln(1-x)"
    />
 );
 
@@ -367,10 +367,18 @@ const rawPost = () => {
          <p>
             <strong>Update on July 18th, 2021:</strong> After reading this blog
             post, Khristrian Decastro has pointed out that my mistake was in the
-            step where I say {mistake}. The integral of {oneOver} from {zero} to{" "}
-            {x} with respect to {t} is actually equal to {negNatLog}, <i>not</i>{" "}
-            {natLog}. This is where the erronious negative sign came from in my
-            solution to the Basel problem.
+            step where I say:
+         </p>
+         <br />
+         <p>{step2}</p>
+         <br />
+         <p>{step3NoArrow}</p>
+         <br />
+         <p>
+            The integral of {oneOver} from {zero} to {x} with respect to {t} is
+            actually equal to {negNatLog}, <i>not</i> {natLog}. This is where
+            the erronious negative sign came from in my solution to the Basel
+            problem.
          </p>
       </>
    );
