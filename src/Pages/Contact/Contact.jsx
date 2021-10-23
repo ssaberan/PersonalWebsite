@@ -34,7 +34,7 @@ const StyledFormWrapper = styled.div`
    width: 100%;
    margin: auto;
    display: block;
-   background-image: linear-gradient(#164d69, #101522);
+   background-image: linear-gradient(#101522, #164d69);
    top: 0;
    bottom: 0;
 `;
