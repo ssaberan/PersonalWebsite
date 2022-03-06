@@ -7,7 +7,7 @@ Portfolio of Soroush's blog posts, projects, and resume, as well as a contact fo
 Install any necessary dependecnies (only needs to be done if node_modules are not already installed)
 
 ```bash
-npm i
+npm ci
 ```
 
 Build the files for production (not required for running the dev server)
