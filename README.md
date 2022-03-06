@@ -4,6 +4,12 @@ Portfolio of Soroush's blog posts, projects, and resume, as well as a contact fo
 
 ## Usage
 
+Make sure you are using the correct version of Node
+
+```bash
+nvm use
+```
+
 Install any necessary dependecnies (only needs to be done if node_modules are not already installed)
 
 ```bash
