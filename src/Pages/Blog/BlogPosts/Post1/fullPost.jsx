@@ -7,6 +7,7 @@ import rawPost from "./rawPost";
 const StyledPage = styled.div`
    margin: auto;
    width: 60%;
+   max-width: 60rem;
    padding-top: 30px;
    padding-bottom: 50px;
    background: white;
