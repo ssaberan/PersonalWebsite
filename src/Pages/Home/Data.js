@@ -49,6 +49,7 @@ export const endingData = {
    subheader: "Feel free to check out the other menu items above",
    description: "If you are hiring, feel free to download my resume below",
    verticalPadding: 60,
-   url: "/soroush_saberan_resume.pdf",
+   url: "/resume",
    buttonText: "Resume",
+   sameTab: true,
 };
