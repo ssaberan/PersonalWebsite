@@ -22,6 +22,12 @@ const StyledResume = styled.div`
    }
 `;
 
+const Center = styled.div`
+   text-align: center;
+   padding-top: 30px;
+   font-size: 24px;
+`;
+
 const Resume = () => {
    const { data } = useAsync({
       promiseFn: fetchResume,
@@ -31,10 +37,14 @@ const Resume = () => {
          <Helmet>
             <title>Resume</title>
          </Helmet>
-         <StyledResume
-            dangerouslySetInnerHTML={{ __html: data?.resume }}
-            tabIndex={0}
-         />
+         {data?.resume ? (
+            <StyledResume
+               dangerouslySetInnerHTML={{ __html: data?.resume }}
+               tabIndex={0}
+            />
+         ) : (
+            <Center>loading...</Center>
+         )}
       </>
    );
 };
