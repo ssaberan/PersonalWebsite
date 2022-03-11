@@ -9,12 +9,13 @@ const StyledResume = styled.div`
    margin: auto;
    width: 60%;
    max-width: 60rem;
-   padding-top: 30px;
-   padding-bottom: 50px;
    background: white;
+   padding: 40px;
+   border-radius: 15px;
 
    @media screen and (max-width: 960px) {
       width: 75%;
+      padding: 0px;
    }
 
    @media screen and (max-width: 425px) {
@@ -28,6 +29,25 @@ const Center = styled.div`
    font-size: 24px;
 `;
 
+const Background = styled.div`
+   background: #101522;
+   color: #fff;
+   width: 100%;
+   margin: auto;
+   display: block;
+   background-image: linear-gradient(#101522, #164d69);
+   top: 0;
+   bottom: 0;
+   padding-top: 40px;
+   padding-bottom: 40px;
+
+   @media screen and (max-width: 768px) {
+      background-image: None;
+      background: None;
+      color: None;
+   }
+`;
+
 const Resume = () => {
    const { data } = useAsync({
       promiseFn: fetchResume,
@@ -37,14 +57,16 @@ const Resume = () => {
          <Helmet>
             <title>Resume</title>
          </Helmet>
-         {data?.resume ? (
-            <StyledResume
-               dangerouslySetInnerHTML={{ __html: data?.resume }}
-               tabIndex={0}
-            />
-         ) : (
-            <Center>loading...</Center>
-         )}
+         <Background>
+            {data?.resume ? (
+               <StyledResume
+                  dangerouslySetInnerHTML={{ __html: data?.resume }}
+                  tabIndex={0}
+               />
+            ) : (
+               <Center>loading...</Center>
+            )}
+         </Background>
       </>
    );
 };
