@@ -2,6 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { useAsync } from "react-async";
 import styled from "styled-components";
+import { TailSpin } from "react-loading-icons";
 
 import { fetchResume } from "../../Utilities/FetchResume";
 
@@ -48,6 +49,10 @@ const Background = styled.div`
    }
 `;
 
+const StyledLoadingMessage = styled.div`
+   padding: 20px;
+`;
+
 const Resume = () => {
    const { data } = useAsync({
       promiseFn: fetchResume,
@@ -64,7 +69,10 @@ const Resume = () => {
                   tabIndex={0}
                />
             ) : (
-               <Center>loading...</Center>
+               <Center>
+                  <StyledLoadingMessage>loading resume</StyledLoadingMessage>
+                  <TailSpin />
+               </Center>
             )}
          </Background>
       </>
