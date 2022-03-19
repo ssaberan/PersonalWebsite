@@ -14,7 +14,7 @@ const StyledResume = styled.div`
    width: 60%;
    max-width: 60rem;
    background: white;
-   padding: 40px;
+   padding: 40px 60px;
    border-radius: 15px;
    margin-top: 20px;
 
@@ -53,12 +53,9 @@ const StyledLoadingMessage = styled.div`
 `;
 
 const StyledImage = styled.img`
-   padding: 20px;
-   max-width: 300px;
-
-   @media screen and (max-width: 960px) {
-      width: 200px;
-   }
+   margin: 30px;
+   cursor: pointer;
+   max-width: 200px;
 `;
 
 const AboveResumeContainer = styled.div`
@@ -81,16 +78,26 @@ const AboveResumeContainer = styled.div`
 const StyledLinkedIn = styled(GrLinkedin)`
    font-size: 5rem;
    margin: 20px;
+   cursor: pointer;
 `;
 
 const StyledGitHub = styled(GrGithub)`
    font-size: 5rem;
    margin: 20px;
+   cursor: pointer;
 `;
 
 const StyledLogos = styled.div`
    flex-wrap: nowrap;
 `;
+
+const linkedInOnClick = () => {
+   window.open("https://www.linkedin.com/in/ssaberan/", "_blank").focus();
+};
+
+const gitHubOnClick = () => {
+   window.open("https://github.com/ssaberan", "_blank").focus();
+};
 
 const Resume = () => {
    const { data } = useAsync({
@@ -105,8 +112,8 @@ const Resume = () => {
             <AboveResumeContainer>
                <StyledImage src={profileImage} />
                <StyledLogos>
-                  <StyledLinkedIn />
-                  <StyledGitHub />
+                  <StyledLinkedIn onClick={linkedInOnClick} />
+                  <StyledGitHub onClick={gitHubOnClick} />
                </StyledLogos>
             </AboveResumeContainer>
             {data?.resume ? (
