@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { useAsync } from "react-async";
 import styled from "styled-components";
-import { TailSpin } from "react-loading-icons";
+import { Bars } from "react-loading-icons";
 import { GrLinkedin } from "react-icons/gr";
 import { GrGithub } from "react-icons/gr";
 
@@ -46,10 +46,6 @@ const Background = styled.div`
    bottom: 0;
    padding-top: 40px;
    padding-bottom: 40px;
-`;
-
-const StyledLoadingMessage = styled.div`
-   padding: 20px;
 `;
 
 const StyledImage = styled.img`
@@ -123,8 +119,7 @@ const Resume = () => {
                />
             ) : (
                <Center>
-                  <StyledLoadingMessage>loading resume</StyledLoadingMessage>
-                  <TailSpin />
+                  <Bars />
                </Center>
             )}
          </Background>
