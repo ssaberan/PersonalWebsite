@@ -3,8 +3,7 @@ import { Helmet } from "react-helmet";
 import { useAsync } from "react-async";
 import styled from "styled-components";
 import { Bars } from "react-loading-icons";
-import { GrLinkedin } from "react-icons/gr";
-import { GrGithub } from "react-icons/gr";
+import { GrLinkedin, GrGithub } from "react-icons/gr";
 
 import { fetchResume } from "../../Utilities/FetchResume";
 import profileImage from "../../../images/profile.svg";
