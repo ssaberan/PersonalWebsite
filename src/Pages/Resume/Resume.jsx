@@ -3,8 +3,11 @@ import { Helmet } from "react-helmet";
 import { useAsync } from "react-async";
 import styled from "styled-components";
 import { TailSpin } from "react-loading-icons";
+import { GrLinkedin } from "react-icons/gr";
+import { GrGithub } from "react-icons/gr";
 
 import { fetchResume } from "../../Utilities/FetchResume";
+import profileImage from "../../../images/profile.svg";
 
 const StyledResume = styled.div`
    margin: auto;
@@ -13,14 +16,16 @@ const StyledResume = styled.div`
    background: white;
    padding: 40px;
    border-radius: 15px;
+   margin-top: 20px;
 
    @media screen and (max-width: 960px) {
       width: 75%;
-      padding: 0px;
+      padding: 10px;
    }
 
    @media screen and (max-width: 425px) {
       width: 90%;
+      padding: 5px;
    }
 `;
 
@@ -41,16 +46,50 @@ const Background = styled.div`
    bottom: 0;
    padding-top: 40px;
    padding-bottom: 40px;
-
-   @media screen and (max-width: 768px) {
-      background-image: None;
-      background: None;
-      color: None;
-   }
 `;
 
 const StyledLoadingMessage = styled.div`
    padding: 20px;
+`;
+
+const StyledImage = styled.img`
+   padding: 20px;
+   max-width: 300px;
+
+   @media screen and (max-width: 960px) {
+      width: 200px;
+   }
+`;
+
+const AboveResumeContainer = styled.div`
+   margin: auto;
+   width: 60%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+
+   @media screen and (max-width: 960px) {
+      width: 75%;
+   }
+
+   @media screen and (max-width: 425px) {
+      width: 90%;
+   }
+`;
+
+const StyledLinkedIn = styled(GrLinkedin)`
+   font-size: 5rem;
+   margin: 20px;
+`;
+
+const StyledGitHub = styled(GrGithub)`
+   font-size: 5rem;
+   margin: 20px;
+`;
+
+const StyledLogos = styled.div`
+   flex-wrap: nowrap;
 `;
 
 const Resume = () => {
@@ -63,6 +102,13 @@ const Resume = () => {
             <title>Resume</title>
          </Helmet>
          <Background>
+            <AboveResumeContainer>
+               <StyledImage src={profileImage} />
+               <StyledLogos>
+                  <StyledLinkedIn />
+                  <StyledGitHub />
+               </StyledLogos>
+            </AboveResumeContainer>
             {data?.resume ? (
                <StyledResume
                   dangerouslySetInnerHTML={{ __html: data?.resume }}
