@@ -4,6 +4,7 @@ import { useAsync } from "react-async";
 import styled from "styled-components";
 import { Bars } from "react-loading-icons";
 import { GrLinkedin, GrGithub } from "react-icons/gr";
+import { FaFileDownload } from "react-icons/fa";
 
 import { fetchResume } from "../../Utilities/FetchResume";
 import profileImage from "../../../images/profile.svg";
@@ -48,7 +49,7 @@ const Background = styled.div`
 `;
 
 const StyledImage = styled.img`
-   margin: 25px;
+   margin: 20px;
    max-width: 250px;
 `;
 
@@ -71,14 +72,44 @@ const AboveResumeContainer = styled.div`
 
 const StyledLinkedIn = styled(GrLinkedin)`
    font-size: 5rem;
-   margin: 25px;
+   margin: 20px;
    cursor: pointer;
+
+   @media screen and (max-width: 960px) {
+      font-size: 4rem;
+   }
+
+   @media screen and (max-width: 425px) {
+      font-size: 3rem;
+   }
 `;
 
 const StyledGitHub = styled(GrGithub)`
    font-size: 5rem;
-   margin: 25px;
+   margin: 20px;
    cursor: pointer;
+
+   @media screen and (max-width: 960px) {
+      font-size: 4rem;
+   }
+
+   @media screen and (max-width: 425px) {
+      font-size: 3rem;
+   }
+`;
+
+const StyledDownload = styled(FaFileDownload)`
+   font-size: 5rem;
+   margin: 20px;
+   cursor: pointer;
+
+   @media screen and (max-width: 960px) {
+      font-size: 4rem;
+   }
+
+   @media screen and (max-width: 425px) {
+      font-size: 3rem;
+   }
 `;
 
 const StyledLogos = styled.div`
@@ -109,8 +140,15 @@ const Resume = () => {
             <AboveResumeContainer>
                <StyledImage src={profileImage} />
                <StyledLogos>
-                  <StyledLinkedIn onClick={linkedInOnClick} />
-                  <StyledGitHub onClick={gitHubOnClick} />
+                  <StyledLinkedIn
+                     onClick={linkedInOnClick}
+                     title="Open my LinkedIn page in a new tab"
+                  />
+                  <StyledGitHub
+                     onClick={gitHubOnClick}
+                     title="Open my Github page in a new tab"
+                  />
+                  <StyledDownload title="Download my resume" />
                </StyledLogos>
             </AboveResumeContainer>
             {data?.resume ? (
