@@ -127,6 +127,10 @@ const gitHubOnClick = () => {
    window.open("https://github.com/ssaberan", "_blank").focus();
 };
 
+const downloadOnClick = () => {
+   window.open("https://ss-personal-api.herokuapp.com/api/pdfResume");
+};
+
 const Resume = () => {
    const { data } = useAsync({
       promiseFn: fetchResume,
@@ -148,7 +152,10 @@ const Resume = () => {
                      onClick={gitHubOnClick}
                      title="Open my Github page in a new tab"
                   />
-                  <StyledDownload title="Download my resume" />
+                  <StyledDownload
+                     onClick={downloadOnClick}
+                     title="Download my resume"
+                  />
                </StyledLogos>
             </AboveResumeContainer>
             {data?.resume ? (
