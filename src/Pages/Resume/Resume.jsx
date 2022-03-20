@@ -48,9 +48,9 @@ const Background = styled.div`
 `;
 
 const StyledImage = styled.img`
-   margin: 30px;
+   margin: 25px;
    cursor: pointer;
-   max-width: 200px;
+   max-width: 250px;
 `;
 
 const AboveResumeContainer = styled.div`
@@ -72,18 +72,21 @@ const AboveResumeContainer = styled.div`
 
 const StyledLinkedIn = styled(GrLinkedin)`
    font-size: 5rem;
-   margin: 20px;
+   margin: 25px;
    cursor: pointer;
 `;
 
 const StyledGitHub = styled(GrGithub)`
    font-size: 5rem;
-   margin: 20px;
+   margin: 25px;
    cursor: pointer;
 `;
 
 const StyledLogos = styled.div`
    flex-wrap: nowrap;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 `;
 
 const linkedInOnClick = () => {
