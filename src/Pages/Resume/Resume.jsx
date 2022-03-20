@@ -49,7 +49,6 @@ const Background = styled.div`
 
 const StyledImage = styled.img`
    margin: 25px;
-   cursor: pointer;
    max-width: 250px;
 `;
 
