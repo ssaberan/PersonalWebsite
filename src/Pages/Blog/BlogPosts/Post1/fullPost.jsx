@@ -6,19 +6,26 @@ import rawPost from "./rawPost";
 
 const StyledPage = styled.div`
    margin: auto;
-   width: 60%;
    max-width: 60rem;
-   padding-top: 30px;
-   padding-bottom: 50px;
+   padding: 40px 60px;
    background: white;
+   border-radius: 20px;
 
    @media screen and (max-width: 960px) {
-      width: 75%;
+      padding: 40px 30px;
    }
 
    @media screen and (max-width: 425px) {
-      width: 90%;
+      padding: 40px 10px;
    }
+`;
+
+const Background = styled.div`
+   background: #101522;
+   background-image: linear-gradient(#101522, #164d69);
+   top: 0;
+   bottom: 0;
+   margin: auto;
 `;
 
 const Post1 = () => {
@@ -27,7 +34,9 @@ const Post1 = () => {
          <Helmet>
             <title>Blog Post 1</title>
          </Helmet>
-         <StyledPage>{rawPost()}</StyledPage>
+         <Background>
+            <StyledPage>{rawPost()}</StyledPage>
+         </Background>
       </>
    );
 };
