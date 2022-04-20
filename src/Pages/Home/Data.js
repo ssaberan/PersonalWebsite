@@ -47,7 +47,8 @@ export const endingData = {
    darkTheme: false,
    alignment: "center",
    subheader: "Feel free to check out the other menu items above",
-   description: "If you are hiring, feel free to download my resume below",
+   description:
+      "If you are hiring, feel free to view and download my resume below",
    verticalPadding: 60,
    url: "/resume",
    buttonText: "Resume",
