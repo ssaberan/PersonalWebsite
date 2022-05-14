@@ -12,14 +12,6 @@ const StyledPage = styled.div`
    padding: 20px;
 `;
 
-const StyledBackground = styled.div`
-   background: #101522;
-   background-image: linear-gradient(#164d69, #101522);
-   top: 0;
-   bottom: 0;
-   margin: auto;
-`;
-
 const StyledImage = styled.img`
    padding: 0;
    display: block;
@@ -34,12 +26,10 @@ const Sent = () => {
          <Helmet>
             <title>Email Sent</title>
          </Helmet>
-         <StyledBackground>
-            <StyledPage>
-               <h1>Sent!</h1>
-               <StyledImage src={sentImage} />
-            </StyledPage>
-         </StyledBackground>
+         <StyledPage>
+            <h1>Sent!</h1>
+            <StyledImage src={sentImage} />
+         </StyledPage>
       </>
    );
 };

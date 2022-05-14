@@ -7,6 +7,10 @@ const GlobalStyling = createGlobalStyle`
     padding: 0;
     font-family: "DejaVu Sans Mono", monospace;
 }
+
+body {
+   background: #142247;
+ }
 `;
 
 export const StyledGlobalContainer = styled.div`

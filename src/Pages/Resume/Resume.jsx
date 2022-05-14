@@ -36,14 +36,7 @@ const Center = styled.div`
 `;
 
 const Background = styled.div`
-   background: #101522;
    color: #fff;
-   width: 100%;
-   margin: auto;
-   display: block;
-   background-image: linear-gradient(#101522, #164d69);
-   top: 0;
-   bottom: 0;
    padding-top: 40px;
    padding-bottom: 40px;
 `;

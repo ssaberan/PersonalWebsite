@@ -18,6 +18,7 @@ const StyledForm = styled(Form)`
    margin: auto;
    padding-top: 2rem;
    padding-bottom: 5rem;
+   color: #fff;
 
    @media screen and (max-width: 768px) {
       width: 60%;
@@ -26,17 +27,6 @@ const StyledForm = styled(Form)`
    @media screen and (max-width: 425px) {
       width: 90%;
    }
-`;
-
-const StyledFormWrapper = styled.div`
-   background: #101522;
-   color: #fff;
-   width: 100%;
-   margin: auto;
-   display: block;
-   background-image: linear-gradient(#101522, #164d69);
-   top: 0;
-   bottom: 0;
 `;
 
 const StyledInputWrapper = styled.div`
@@ -86,26 +76,24 @@ const Contact = () => {
             validate={validate}
          >
             {({ values }) => (
-               <StyledFormWrapper>
-                  <StyledForm onSubmit={sendEmail} autoComplete="off">
-                     <h1>Contact Form</h1>
-                     <h3>Send an email to Soroush</h3>
-                     <StyledInputWrapper>
-                        <TextInput name="name" label="Name" />
-                     </StyledInputWrapper>
-                     <StyledInputWrapper>
-                        <TextInput name="subject" label="Subject" />
-                     </StyledInputWrapper>
-                     <StyledInputWrapper>
-                        <TextArea name="message" label="Message" />
-                     </StyledInputWrapper>
-                     <Button
-                        type="submit"
-                        text="Send"
-                        disabled={!isValid(values)}
-                     />
-                  </StyledForm>
-               </StyledFormWrapper>
+               <StyledForm onSubmit={sendEmail} autoComplete="off">
+                  <h1>Contact Form</h1>
+                  <h3>Send an email to Soroush</h3>
+                  <StyledInputWrapper>
+                     <TextInput name="name" label="Name" />
+                  </StyledInputWrapper>
+                  <StyledInputWrapper>
+                     <TextInput name="subject" label="Subject" />
+                  </StyledInputWrapper>
+                  <StyledInputWrapper>
+                     <TextArea name="message" label="Message" />
+                  </StyledInputWrapper>
+                  <Button
+                     type="submit"
+                     text="Send"
+                     disabled={!isValid(values)}
+                  />
+               </StyledForm>
             )}
          </Formik>
       </>

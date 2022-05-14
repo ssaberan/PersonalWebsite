@@ -20,23 +20,13 @@ const StyledPage = styled.div`
    }
 `;
 
-const Background = styled.div`
-   background: #101522;
-   background-image: linear-gradient(#101522, #164d69);
-   top: 0;
-   bottom: 0;
-   margin: auto;
-`;
-
 const Post1 = () => {
    return (
       <>
          <Helmet>
             <title>Blog Post 1</title>
          </Helmet>
-         <Background>
-            <StyledPage>{rawPost()}</StyledPage>
-         </Background>
+         <StyledPage>{rawPost()}</StyledPage>
       </>
    );
 };
