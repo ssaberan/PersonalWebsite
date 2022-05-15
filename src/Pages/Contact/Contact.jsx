@@ -44,7 +44,7 @@ const Contact = () => {
             "service_wuk7fha",
             "template_iwcxr0f",
             e.target,
-            "user_L5iDeh6WPPpM7T9mHslFG" // ok to expose. can only be used to send emails to me
+            "user_L5iDeh6WPPpM7T9mHslFG"
          )
          .then(
             (result) => {

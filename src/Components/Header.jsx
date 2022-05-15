@@ -5,9 +5,6 @@ import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 import { FaTimes, FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-import { StyledGlobalContainer } from "../GlobalStyling";
-
-// styled components for Header
 const StyledHeader = styled.nav`
    background: #101522;
    height: 80px;
@@ -20,12 +17,22 @@ const StyledHeader = styled.nav`
    z-index: 999;
 `;
 
-const StyledContainer = styled(StyledGlobalContainer)`
+const StyledContainer = styled.div`
    display: flex;
    justify-content: space-between;
    height: 80px;
+   z-index: 1;
+   width: 100%;
+   max-width: 1300px;
+   margin-right: auto;
+   margin-left: auto;
+   padding-right: 50px;
+   padding-left: 50px;
 
-   ${StyledGlobalContainer}
+   @media screen and (max-width: 960px) {
+      padding-right: 30px;
+      padding-left: 30px;
+   }
 `;
 
 const StyledLogo = styled(Link)`
@@ -123,7 +130,6 @@ const StyledMenuItemLink = styled(Link)`
    }
 `;
 
-// helper functions
 const menu = (menuItems) => {
    let i = 0;
    return menuItems.map((menuItem) => {
@@ -139,7 +145,6 @@ const menu = (menuItems) => {
    });
 };
 
-// Header
 const Header = () => {
    const [openMobileMenu, setOpenMobileMenu] = useState(false);
 

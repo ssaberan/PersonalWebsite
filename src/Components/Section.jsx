@@ -2,8 +2,22 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import { StyledGlobalContainer } from "../GlobalStyling";
 import Button from "./Button";
+
+const StyledContainer = styled.div`
+   z-index: 1;
+   width: 100%;
+   max-width: 1300px;
+   margin-right: auto;
+   margin-left: auto;
+   padding-right: 50px;
+   padding-left: 50px;
+
+   @media screen and (max-width: 960px) {
+      padding-right: 30px;
+      padding-left: 30px;
+   }
+`;
 
 const StyledSection = styled.div`
    color: #fff;
@@ -106,7 +120,7 @@ const Section = ({
    return (
       <>
          <StyledSection darkTheme={darkTheme} verticalPadding={verticalPadding}>
-            <StyledGlobalContainer>
+            <StyledContainer>
                <StyledRow alignment={alignment}>
                   <StyledColumn>
                      <StyledText>
@@ -147,7 +161,7 @@ const Section = ({
                      </StyledColumn>
                   )}
                </StyledRow>
-            </StyledGlobalContainer>
+            </StyledContainer>
          </StyledSection>
       </>
    );
