@@ -254,12 +254,6 @@ const natLog = (
 const rawPost = () => {
    return (
       <>
-         <h1>A bizarre way of evaluating infinite series</h1>
-         <br />
-         <h4>Posted on July 4th, 2021 by Soroush Saberan</h4>
-         <br />
-         <hr />
-         <br />
          <p>
             Given a function {f} that is infinitely differentiable around a
             point {a}, we can derive the Taylor expansion of {f} around {a} as
