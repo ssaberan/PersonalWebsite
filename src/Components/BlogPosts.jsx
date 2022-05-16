@@ -25,12 +25,14 @@ const BlogPosts = ({ blogs }) => {
             return (
                <tr>
                   {[...Array(numberOfColumns).keys()].map(() => {
-                     let blog = blogs.shift();
-                     return (
-                        <td>
-                           <BlogPost {...blog} />
-                        </td>
-                     );
+                     if (blogs.length !== 0) {
+                        let blog = blogs.shift();
+                        return (
+                           <td>
+                              <BlogPost {...blog} />
+                           </td>
+                        );
+                     }
                   })}
                </tr>
             );
