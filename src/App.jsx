@@ -1,9 +1,9 @@
 import React from "react";
 import {
-   HashRouter as Router,
-   Switch,
-   Route,
-   Redirect,
+    HashRouter as Router,
+    Switch,
+    Route,
+    Redirect,
 } from "react-router-dom";
 
 import Header from "./Components/Header";
@@ -19,27 +19,27 @@ import Contact from "./Pages/Contact/Contact";
 import Post1 from "./Pages/Blog/BlogPosts/Post1/fullPost";
 
 function App() {
-   return (
-      <Router>
-         <GlobalStyling />
-         <ScrollToTop />
-         <Header />
-         <Switch>
-            {/* home page */}
-            <Redirect path="/" to="/home" exact component={Home} />
+    return (
+        <Router>
+            <GlobalStyling />
+            <ScrollToTop />
+            <Header />
+            <Switch>
+                {/* home page */}
+                <Redirect path="/" to="/home" exact component={Home} />
 
-            {/* menu pages */}
-            <Route path="/home" exact component={Home} />
-            <Route path="/blog" exact component={Blog} />
-            <Route path="/projects" exact component={Projects} />
-            <Route path="/resume" exact component={Resume} />
-            <Route path="/contact" exact component={Contact} />
+                {/* menu pages */}
+                <Route path="/home" exact component={Home} />
+                <Route path="/blog" exact component={Blog} />
+                <Route path="/projects" exact component={Projects} />
+                <Route path="/resume" exact component={Resume} />
+                <Route path="/contact" exact component={Contact} />
 
-            {/* blog posts */}
-            <Route path="/blog/1" exact component={Post1} />
-         </Switch>
-      </Router>
-   );
+                {/* blog posts */}
+                <Route path="/blog/1" exact component={Post1} />
+            </Switch>
+        </Router>
+    );
 }
 
 export default App;
