@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-const StyledCard = styled.div`
+const StyledBlogPost = styled.div`
    border: 10px solid #101522;
    margin: 40px;
    text-align: center;
@@ -11,27 +11,6 @@ const StyledCard = styled.div`
    overflow: hidden;
    background: #101522;
    border-radius: 15px;
-
-   &:hover {
-      box-shadow: 10px 10px 10px 10px gray;
-      margin-top: 35px;
-      margin-left: 35px;
-      transition: all 0.3s ease;
-   }
-
-   @media screen and (max-width: 480px) {
-      margin: auto;
-      width: 80%;
-      margin-top: 35px;
-      padding: 10px;
-      border: 5px solid #101522;
-
-      &:hover {
-         box-shadow: none;
-         margin: auto;
-         margin-top: 35px;
-      }
-   }
 `;
 
 const StyledImage = styled.img`
@@ -58,25 +37,25 @@ const StyledDescription = styled.div`
    color: white;
 `;
 
-const Card = ({ image, title, description, url }) => {
+const BlogPost = ({ image, title, description, url }) => {
    return (
       <>
-         <StyledCard>
+         <StyledBlogPost>
             <Link to={url} style={{ textDecoration: "none" }}>
                <StyledImage src={image} />
                <StyledTitle>{title}</StyledTitle>
                <StyledDescription>{description}</StyledDescription>
             </Link>
-         </StyledCard>
+         </StyledBlogPost>
       </>
    );
 };
 
-Card.propTypes = {
+BlogPost.propTypes = {
    image: PropTypes.string,
    title: PropTypes.string,
    description: PropTypes.string,
    url: PropTypes.string,
 };
 
-export default Card;
+export default BlogPost;
