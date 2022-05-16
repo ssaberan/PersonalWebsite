@@ -11,6 +11,12 @@ const StyledBlogPost = styled.div`
    overflow: hidden;
    background: #101522;
    border-radius: 15px;
+
+   &:hover {
+      background: #1a1522;
+      border-color: #1a1522;
+      transition: all 0.3s ease;
+   }
 `;
 
 const StyledImage = styled.img`
