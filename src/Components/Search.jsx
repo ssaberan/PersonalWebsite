@@ -45,13 +45,25 @@ const Search = ({ allItems, setResults }) => {
     return (
         <>
             <StyledBar>
-                <StyledSearch type="text" placeholder="Search" id="search" />
+                <StyledSearch
+                    type="text"
+                    placeholder="Search"
+                    id="searchInput"
+                    onKeyPress={(event) => {
+                        if (event.key === "Enter") {
+                            document.getElementById("searchButton").click();
+                        }
+                    }}
+                />
                 <StyledButton
                     type="button"
+                    id="searchButton"
                     onClick={() => {
                         setResults(
                             fuse
-                                .search(document.getElementById("search").value)
+                                .search(
+                                    document.getElementById("searchInput").value
+                                )
                                 .map((result) => result.item)
                         );
                     }}
