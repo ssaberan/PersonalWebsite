@@ -52,9 +52,11 @@ const Search = ({ allItems, setResults }) => {
                     type="text"
                     placeholder="Search"
                     id="searchInput"
+                    autoComplete="off"
                     onKeyPress={(event) => {
                         if (event.key === "Enter") {
                             document.getElementById("searchButton").click();
+                            document.getElementById("searchInput").blur();
                         }
                     }}
                 />
