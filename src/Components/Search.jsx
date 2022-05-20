@@ -5,7 +5,8 @@ import { ImSearch } from "react-icons/im";
 import Fuse from "fuse.js";
 
 const StyledSearch = styled.input`
-    margin: 20px auto;
+    margin: auto;
+    margin-top: 40px;
     width: 50%;
     height: 2.5rem;
     padding-left: 10px;
@@ -14,9 +15,11 @@ const StyledSearch = styled.input`
     border-bottom-left-radius: 15px;
     display: inline;
     border: none;
+    max-width: 500px;
 
     @media screen and (max-width: 960px) {
         width: 80%;
+        margin-top: 20px;
     }
 `;
 

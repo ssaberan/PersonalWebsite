@@ -6,7 +6,7 @@ import Search from "../../Components/Search";
 import { blogPostData1 } from "./Data";
 
 const Blog = () => {
-    const allBlogs = [blogPostData1];
+    const allBlogs = [blogPostData1, blogPostData1, blogPostData1];
     const [results, setResults] = useState(allBlogs);
 
     return (

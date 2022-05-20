@@ -10,10 +10,10 @@ const StyledTable = styled.table`
 
 const BlogPosts = ({ blogs }) => {
     let numberOfColumns = 3;
-    if (window.screen.width < 1024) {
+    if (window.screen.width <= 1024) {
         numberOfColumns = 2;
     }
-    if (window.screen.width < 768) {
+    if (window.screen.width <= 768) {
         numberOfColumns = 1;
     }
 

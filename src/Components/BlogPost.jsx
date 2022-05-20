@@ -12,6 +12,15 @@ const StyledBlogPost = styled.div`
     background: #101522;
     border-radius: 15px;
 
+    @media screen and (max-width: 1440px) {
+        margin: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin: 0px;
+        margin-bottom: 20px;
+    }
+
     &:hover {
         background: #1a1522;
         border-color: #1a1522;
