@@ -1,12 +1,3 @@
-/*
-export const blogPostData1 = {
-   title: title as a string,
-   description: description as a string,
-   image: imported image,
-   url: relative url to blog post,
-};
-*/
-
 import blog1Image from "../../../images/pi.jpg";
 export const blogPostData1 = {
     title: "A bizarre way of evaluating infinite series",
