@@ -11,7 +11,7 @@ const StyledButton = styled.button`
     width: 100%;
     border: none;
     outline: none;
-    border-radius: 4px;
+    border-radius: 15px;
     background: ${({ disabled }) => (disabled ? "#c9c9c9" : "#4b59f7")};
     white-space: nowrap;
     padding: 12px 64px;

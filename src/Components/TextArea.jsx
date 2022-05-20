@@ -11,6 +11,8 @@ const StyledTextArea = styled.textarea`
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
+    border-radius: 15px;
+    border: none;
 `;
 
 const StyledLabel = styled.label`
