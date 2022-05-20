@@ -43,7 +43,7 @@ const Search = ({ allItems, setResults }) => {
     const options = {
         keys: ["title", "description", "tags"],
     };
-    const fuse = new Fuse(allItems, options);
+    const fuse = new Fuse([...allItems], options);
 
     return (
         <>
