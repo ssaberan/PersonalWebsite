@@ -26,7 +26,7 @@ const StyledButton = styled.button`
     height: 2.5rem;
     width: 2.5rem;
     font-size: 20px;
-    background-color: #a3ffb7;
+    background-color: #00ff84;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     cursor: pointer;
