@@ -38,7 +38,20 @@ const StyledBar = styled.div`
 
 const Search = ({ allItems, setResults }) => {
     const options = {
-        keys: ["title", "description", "tags"],
+        keys: [
+            {
+                name: "title",
+                weight: 0.4,
+            },
+            {
+                name: "tags",
+                weight: 0.4,
+            },
+            {
+                name: "description",
+                weight: 0.2,
+            },
+        ],
     };
     const fuse = new Fuse([...allItems], options);
 
