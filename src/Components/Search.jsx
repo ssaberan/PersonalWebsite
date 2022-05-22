@@ -30,6 +30,7 @@ const StyledButton = styled.button`
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     cursor: pointer;
+    transform: translate(0px, 3px);
 `;
 
 const StyledBar = styled.div`
