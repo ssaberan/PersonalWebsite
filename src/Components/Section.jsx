@@ -22,7 +22,7 @@ const StyledContainer = styled.div`
 const StyledSection = styled.div`
     color: #fff;
     padding: ${({ verticalPadding }) => verticalPadding}px 0px;
-    background: ${({ darkTheme }) => (darkTheme ? "#101522" : "#fff")};
+    background: ${({ darkTheme }) => (darkTheme ? "#001414" : "#fff")};
 `;
 
 const StyledRow = styled.div`

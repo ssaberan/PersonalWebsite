@@ -6,7 +6,7 @@ import { FaTimes, FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const StyledHeader = styled.nav`
-    background: #101522;
+    background: #001414;
     height: 80px;
     display: flex;
     justify-content: center;
