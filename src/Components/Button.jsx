@@ -12,7 +12,7 @@ const StyledButton = styled.button`
     border: none;
     outline: none;
     border-radius: 15px;
-    background: ${({ disabled }) => (disabled ? "#c9c9c9" : "#00e600")};
+    background: ${({ disabled }) => (disabled ? "#c9c9c9" : "#4b59f7")};
     white-space: nowrap;
     padding: 12px 64px;
     color: ${({ disabled }) => (disabled ? "#474747" : "#fff")};
@@ -20,8 +20,8 @@ const StyledButton = styled.button`
     cursor: ${({ disabled }) => (disabled ? "" : "pointer")};
 
     &:hover {
-        transition: all 0.3s east-out;
-        background: ${({ disabled }) => (disabled ? "#c9c9c9" : "#00ff00")};
+        transition: all 0.4s east-out;
+        background: ${({ disabled }) => (disabled ? "#c9c9c9" : "#0467fb")};
     }
 
     @media screen and (max-width: 768px) {

@@ -22,9 +22,9 @@ const StyledBlogPost = styled.div`
     }
 
     &:hover {
-        background: #1a1522;
-        border-color: #1a1522;
-        transition: all 0.3s ease;
+        background: #241522;
+        border-color: #241522;
+        transition: all 0.4s ease;
     }
 `;
 
