@@ -4,12 +4,12 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const StyledBlogPost = styled.div`
-    border: 10px solid #00141e;
+    border: 10px solid #000f1e;
     margin: 40px;
     text-align: center;
     width: 300px;
     overflow: hidden;
-    background: #00141e;
+    background: #000f1e;
     border-radius: 15px;
 
     @media screen and (max-width: 1440px) {
@@ -22,8 +22,8 @@ const StyledBlogPost = styled.div`
     }
 
     &:hover {
-        background: #001428;
-        border-color: #001428;
+        background: #000f28;
+        border-color: #000f28;
         transition: all 0.4s ease;
     }
 `;

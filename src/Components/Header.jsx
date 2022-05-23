@@ -6,7 +6,7 @@ import { FaTimes, FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const StyledHeader = styled.nav`
-    background: #00141e;
+    background: #000f1e;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -87,7 +87,7 @@ const StyledMenu = styled.div`
         position: absolute;
         top: 80px;
         left: ${({ openMobileMenu }) => (openMobileMenu ? 0 : "100%")};
-        background: #101522;
+        background: #000f1e;
     }
 `;
 
