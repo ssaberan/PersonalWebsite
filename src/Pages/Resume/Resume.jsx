@@ -46,6 +46,14 @@ const StyledImage = styled.img`
     max-width: 250px;
     transform: scale(${(props) => props.scale}, ${(props) => props.scale});
     cursor: pointer;
+
+    // prevent image from being highlighted
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 `;
 
 const AboveResumeContainer = styled.div`
