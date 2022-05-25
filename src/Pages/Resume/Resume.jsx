@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import { useAsync } from "react-async";
 import styled from "styled-components";
@@ -44,6 +44,8 @@ const Background = styled.div`
 const StyledImage = styled.img`
     margin: 20px;
     max-width: 250px;
+    transform: scale(${(props) => props.scale}, ${(props) => props.scale});
+    cursor: pointer;
 `;
 
 const AboveResumeContainer = styled.div`
@@ -124,6 +126,23 @@ const downloadOnClick = () => {
     window.open("https://ss-personal-api.herokuapp.com/api/pdfResume");
 };
 
+const ProfileImage = () => {
+    const [scale, setScale] = useState("1");
+
+    return (
+        <StyledImage
+            src={profileImage}
+            scale={scale}
+            onClick={() => {
+                setScale("0.98");
+                setTimeout(() => {
+                    setScale("1");
+                }, 100);
+            }}
+        />
+    );
+};
+
 const Resume = () => {
     const { data } = useAsync({
         promiseFn: fetchResume,
@@ -135,7 +154,7 @@ const Resume = () => {
             </Helmet>
             <Background>
                 <AboveResumeContainer>
-                    <StyledImage src={profileImage} />
+                    <ProfileImage />
                     <StyledLogos>
                         <StyledLinkedIn
                             onClick={linkedInOnClick}
