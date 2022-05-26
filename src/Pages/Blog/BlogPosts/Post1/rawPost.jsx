@@ -18,6 +18,13 @@ const a = (
     <img src="https://latex.codecogs.com/gif.latex?\inline&space;a" title="a" />
 );
 
+const a0 = (
+    <img
+        src="https://latex.codecogs.com/gif.latex?\inline&space;a=0"
+        title="a=0"
+    />
+);
+
 const taylorFormula = (
     <img
         src="https://latex.codecogs.com/gif.latex?f(a)=\sum_{n=0}^{\infty}\frac{f^{(n)}(a)}{n!}(x-a)^{n}"
@@ -47,38 +54,24 @@ const x = (
     <img src="https://latex.codecogs.com/gif.latex?\inline&space;x" title="x" />
 );
 
-const x2 = (
-    <img
-        src="https://latex.codecogs.com/gif.latex?\inline&space;x=2"
-        title="x=2"
-    />
-);
-
-const a1 = (
-    <img
-        src="https://latex.codecogs.com/gif.latex?\inline&space;a=1"
-        title="a=1"
-    />
-);
-
 const baselTaylorSub = (
     <img
-        src="https://latex.codecogs.com/gif.latex?\frac{1}{n^{2}}=f^{(n-1)}(1)\frac{1}{(n-1)!}\;&space;for\;&space;n\in&space;\mathbb{N}"
-        title="\frac{1}{n^{2}}=f^{(n-1)}(1)\frac{1}{(n-1)!}\; for\; n\in \mathbb{N}"
+        src="https://latex.codecogs.com/svg.image?\frac{1}{n^{2}}=f^{(n-1)}(0)\frac{1}{(n-1)!}\;&space;for\;&space;n\in&space;\mathbb{N}"
+        title="https://latex.codecogs.com/svg.image?\frac{1}{n^{2}}=f^{(n-1)}(0)\frac{1}{(n-1)!}\; for\; n\in \mathbb{N}"
     />
 );
 
 const fPrime = (
     <img
-        src="https://latex.codecogs.com/gif.latex?\inline&space;f^{(n)}(1)"
-        title="f^{(n)}(1)"
+        src="https://latex.codecogs.com/svg.image?f^{(n)}(0)"
+        title="https://latex.codecogs.com/svg.image?f^{(n)}(0)"
     />
 );
 
 const fPrimeEquals = (
     <img
-        src="https://latex.codecogs.com/gif.latex?f^{(n)}(1)=\frac{n!}{(n&plus;1)^{2}}\;&space;for\;&space;n\in&space;\mathbb{N}\cup\{0\}"
-        title="f^{(n)}(1)=\frac{n!}{(n+1)^{2}}\; for\; n\in \mathbb{N}\cup\{0\}"
+        src="https://latex.codecogs.com/svg.image?f^{(n)}(0)=\frac{n!}{(n&plus;1)^{2}}\;&space;for\;&space;n\in&space;\mathbb{N}\cup\{0\}"
+        title="https://latex.codecogs.com/svg.image?f^{(n)}(0)=\frac{n!}{(n+1)^{2}}\; for\; n\in \mathbb{N}\cup\{0\}"
     />
 );
 
@@ -89,24 +82,31 @@ const x1 = (
     />
 );
 
+const x0 = (
+    <img
+        src="https://latex.codecogs.com/gif.latex?\inline&space;x=0"
+        title="x=0"
+    />
+);
+
 const taylorOfF = (
     <img
-        src="https://latex.codecogs.com/gif.latex?f(x)=\sum_{n=0}^{\infty}\frac{f^{(n)}(1)}{n!}(x-1)^{n}"
-        title="f(x)=\sum_{n=0}^{\infty}\frac{f^{(n)}(1)}{n!}(x-1)^{n}"
+        src="https://latex.codecogs.com/svg.image?f(x)=\sum_{n=0}^{\infty}\frac{f^{(n)}(0)}{n!}x^{n}"
+        title="https://latex.codecogs.com/svg.image?f(x)=\sum_{n=0}^{\infty}\frac{f^{(n)}(0)}{n!}x^{n}"
     />
 );
 
 const fPrimeEqualsInline = (
     <img
-        src="https://latex.codecogs.com/gif.latex?\inline&space;f^{(n)}(1)=\frac{n!}{(n&plus;1)^{2}}"
-        title="f^{(n)}(1)=\frac{n!}{(n+1)^{2}}"
+        src="https://latex.codecogs.com/svg.image?\inline&space;f^{(n)}(0)=\frac{n!}{(n&plus;1)^{2}}"
+        title="https://latex.codecogs.com/svg.image?\inline f^{(n)}(0)=\frac{n!}{(n+1)^{2}}"
     />
 );
 
 const substitution = (
     <img
-        src="https://latex.codecogs.com/gif.latex?f(x)=\sum_{n=0}^{\infty}\frac{\frac{n!}{(n&plus;1)^{2}}}{n!}(x-1)^{n}=\sum_{n=0}^{\infty}\frac{(x-1)^{n}}{(n&plus;1)^{2}}"
-        title="f(x)=\sum_{n=0}^{\infty}\frac{\frac{n!}{(n+1)^{2}}}{n!}(x-1)^{n}=\sum_{n=0}^{\infty}\frac{(x-1)^{n}}{(n+1)^{2}}"
+        src="https://latex.codecogs.com/gif.latex?f(x)=\sum_{n=0}^{\infty}\frac{\frac{n!}{(n&plus;1)^{2}}}{n!}x^{n}=\sum_{n=0}^{\infty}\frac{x^{n}}{(n&plus;1)^{2}}"
+        title="f(x)=\sum_{n=0}^{\infty}\frac{\frac{n!}{(n+1)^{2}}}{n!}x^{n}=\sum_{n=0}^{\infty}\frac{(x-1)^{n}}{(n+1)^{2}}"
     />
 );
 
@@ -119,8 +119,8 @@ const formula = (
 
 const becomes = (
     <img
-        src="https://latex.codecogs.com/gif.latex?\inline&space;\sum_{n=0}^{\infty}\frac{(x-1)^{n}}{(n&plus;1)^{2}}"
-        title="\sum_{n=0}^{\infty}\frac{(x-1)^{n}}{(n+1)^{2}}"
+        src="https://latex.codecogs.com/gif.latex?\inline&space;\sum_{n=0}^{\infty}\frac{x^{n}}{(n&plus;1)^{2}}"
+        title="\sum_{n=0}^{\infty}\frac{x^{n}}{(n+1)^{2}}"
     />
 );
 
@@ -166,31 +166,24 @@ const step6 = (
     />
 );
 
-const step7 = (
-    <img
-        src="https://latex.codecogs.com/gif.latex?\sum_{n=0}^{\infty}\frac{(x-1)^{n&plus;1}}{(n&plus;1)^{2}}=\int_{0}^{x-1}\frac{ln(1-t)}{t}dt\Rightarrow"
-        title="\sum_{n=0}^{\infty}\frac{(x-1)^{n+1}}{(n+1)^{2}}=\int_{0}^{x-1}\frac{ln(1-t)}{t}dt\Rightarrow"
-    />
-);
-
 const step8 = (
     <img
-        src="https://latex.codecogs.com/gif.latex?\sum_{n=0}^{\infty}\frac{(x-1)^{n}}{(n&plus;1)^{2}}=\frac{1}{x-1}\int_{0}^{x-1}\frac{ln(1-t)}{t}dt\Rightarrow"
-        title="\sum_{n=0}^{\infty}\frac{(x-1)^{n}}{(n+1)^{2}}=\frac{1}{x-1}\int_{0}^{x-1}\frac{ln(1-t)}{t}dt\Rightarrow"
+        src="https://latex.codecogs.com/gif.latex?\sum_{n=0}^{\infty}\frac{x^{n}}{(n&plus;1)^{2}}=\frac{1}{x}\int_{0}^{x}\frac{ln(1-t)}{t}dt\Rightarrow"
+        title="\sum_{n=0}^{\infty}\frac{x^{n}}{(n+1)^{2}}=\frac{1}{x}\int_{0}^{x-1}\frac{ln(1-t)}{t}dt\Rightarrow"
     />
 );
 
 const solvedFunction = (
     <img
-        src="https://latex.codecogs.com/gif.latex?f(x)=\frac{1}{x-1}\int_{0}^{x-1}\frac{ln(1-t)}{t}dt"
-        title="f(x)=\frac{1}{x-1}\int_{0}^{x-1}\frac{ln(1-t)}{t}dt"
+        src="https://latex.codecogs.com/gif.latex?f(x)=\frac{1}{x}\int_{0}^{x}\frac{ln(1-t)}{t}dt"
+        title="f(x)=\frac{1}{x}\int_{0}^{x}\frac{ln(1-t)}{t}dt"
     />
 );
 
 const solvedFunctionInline = (
     <img
-        src="https://latex.codecogs.com/gif.latex?\inline&space;f(x)=\frac{1}{x-1}\int_{0}^{x-1}\frac{ln(1-t)}{t}dt"
-        title="f(x)=\frac{1}{x-1}\int_{0}^{x-1}\frac{ln(1-t)}{t}dt"
+        src="https://latex.codecogs.com/gif.latex?\inline&space;f(x)=\frac{1}{x}\int_{0}^{x}\frac{ln(1-t)}{t}dt"
+        title="f(x)=\frac{1}{x}\int_{0}^{x-1}\frac{ln(1-t)}{t}dt"
     />
 );
 
@@ -289,7 +282,7 @@ const rawPost = () => {
             <br />
             <p>
                 Our choice for {x} and {a} is arbitrary, so lets choose values
-                that simplify the problem. If we let {x2} and {a1}, we get the
+                that simplify the problem. If we let {x1} and {a0}, we get the
                 following:
             </p>
             <br />
@@ -302,7 +295,7 @@ const rawPost = () => {
             <p>So given the requirement above, what is {f}?</p>
             <br />
             <p>
-                If you take the Taylor expansion of {f} centered around {x1},
+                If you take the Taylor expansion of {f} centered around {x0},
                 you get the following:
             </p>
             <br />
@@ -330,8 +323,6 @@ const rawPost = () => {
             <br />
             <p>{step6}</p>
             <br />
-            <p>{step7}</p>
-            <br />
             <p>{step8}</p>
             <br />
             <p>So we get that</p>
@@ -339,16 +330,16 @@ const rawPost = () => {
             <p>{solvedFunction}</p>
             <br />
             <p>
-                is the value for {f} when {x2} we were looking for, thus showing
+                is the value for {f} when {x1} we were looking for, thus showing
                 that it is possible to derive a function from its Taylor
                 expansion for <i>some</i> series {S} around <i>some</i>{" "}
-                infinitely differentiable point (in this case {a1}).
+                infinitely differentiable point (in this case {a0}).
             </p>
             <br />
             <p>Except for one not-so-minor detail...</p>
             <br />
             <p>
-                Assuming I did everything right, if we plug {x2} into{" "}
+                Assuming I did everything right, if we plug {x1} into{" "}
                 {solvedFunctionInline}, we should expect to get the answer to
                 the Basel problem, which was confirmed to be {baselSolution} by
                 Leonhard Eulor in 1734{source}. However, doing so yields{" "}
