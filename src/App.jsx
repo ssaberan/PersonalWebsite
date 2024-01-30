@@ -17,6 +17,7 @@ import Contact from "./Pages/Contact/Contact";
 
 // blog posts
 import Post1 from "./Pages/Blog/BlogPosts/Post1/fullPost";
+import Post2 from "./Pages/Blog/BlogPosts/Post2/fullPost";
 
 function App() {
     return (
@@ -37,6 +38,7 @@ function App() {
 
                 {/* blog posts */}
                 <Route path="/blog/1" exact component={Post1} />
+                <Route path="/blog/2" exact component={Post2} />
             </Switch>
         </Router>
     );

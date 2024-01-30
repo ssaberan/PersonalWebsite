@@ -3,10 +3,10 @@ import { Helmet } from "react-helmet";
 
 import BlogPosts from "../../Components/BlogPosts";
 import Search from "../../Components/Search";
-import { blogPostData1 } from "./Data";
+import { blogPostData1, blogPostData2 } from "./Data";
 
 const Blog = () => {
-    const allBlogs = [blogPostData1];
+    const allBlogs = [blogPostData1, blogPostData2];
     const [results, setResults] = useState(allBlogs);
 
     return (
