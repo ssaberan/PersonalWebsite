@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
-import { useAsync } from "react-async";
 import styled from "styled-components";
-import { Bars } from "react-loading-icons";
 import { GrLinkedin, GrGithub } from "react-icons/gr";
 import { FaFileDownload } from "react-icons/fa";
 
-import { fetchResume } from "../../Utilities/FetchResume";
 import profileImage from "../../../images/profile.svg";
+import resumePDF from "../../../documents/resume.jpg";
 
-const StyledResume = styled.div`
+const StyledResume = styled.img`
     margin: auto;
     width: 60%;
     max-width: 60rem;
@@ -29,16 +27,14 @@ const StyledResume = styled.div`
     }
 `;
 
-const Center = styled.div`
-    text-align: center;
-    padding-top: 30px;
-    font-size: 24px;
-`;
-
 const Background = styled.div`
     color: #fff;
     padding-top: 40px;
     padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 `;
 
 const StyledImage = styled.img`
@@ -131,7 +127,12 @@ const gitHubOnClick = () => {
 };
 
 const downloadOnClick = () => {
-    window.open("https://ss-personal-api.herokuapp.com/api/pdfResume");
+    const link = document.createElement("a");
+    link.href = resumePDF;
+    link.download = "Soroush_Saberan_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 };
 
 const ProfileImage = () => {
@@ -152,9 +153,6 @@ const ProfileImage = () => {
 };
 
 const Resume = () => {
-    const { data } = useAsync({
-        promiseFn: fetchResume,
-    });
     return (
         <>
             <Helmet>
@@ -178,16 +176,7 @@ const Resume = () => {
                         />
                     </StyledLogos>
                 </AboveResumeContainer>
-                {data?.resume ? (
-                    <StyledResume
-                        dangerouslySetInnerHTML={{ __html: data?.resume }}
-                        tabIndex={0}
-                    />
-                ) : (
-                    <Center>
-                        <Bars />
-                    </Center>
-                )}
+                <StyledResume src={resumePDF} title="Resume" tabIndex={0} />
             </Background>
         </>
     );
