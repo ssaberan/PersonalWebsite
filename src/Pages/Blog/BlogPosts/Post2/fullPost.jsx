@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { Helmet } from "react-helmet";
 
-import page1 from "../../../../../images/blog_2/page1.jpg";
-import page2 from "../../../../../images/blog_2/page2.jpg";
-import page3 from "../../../../../images/blog_2/page3.jpg";
-import page4 from "../../../../../images/blog_2/page4.jpg";
-import page5 from "../../../../../images/blog_2/page5.jpg";
+import page1 from "../../../../../documents/blog_2/page1.jpg";
+import page2 from "../../../../../documents/blog_2/page2.jpg";
+import page3 from "../../../../../documents/blog_2/page3.jpg";
+import page4 from "../../../../../documents/blog_2/page4.jpg";
+import page5 from "../../../../../documents/blog_2/page5.jpg";
 
 const StyledPage = styled.img`
     display: block;
