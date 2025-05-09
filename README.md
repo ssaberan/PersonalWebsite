@@ -1,6 +1,6 @@
 # Soroush's Personal Website
 
-Portfolio of Soroush's blog posts, projects, and resume, as well as a contact form for getting in touch with him. Currently live at https://ssaberan.github.io/
+Portfolio of Soroush's blog posts, projects, and resume, as well as a contact form for getting in touch with him. ~~Currently live at https://ssaberan.github.io/~~
 
 ## Usage
 
